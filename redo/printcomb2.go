@@ -19,9 +19,19 @@ func PrintComb2() {
 	for l = 0; l <= 98; l++ {
 		for e = l + 1; e <= 99; e++ {
 			z01.PrintRune('0' + l/10)
+			z01.PrintRune('0' + l%10)
+			z01.PrintRune(' ')
+			z01.PrintRune('0' + e/10)
+			z01.PrintRune('0' + e%10)
+
+			if (l != 98) || (e != 99) {
+				z01.PrintRune(',')
+				z01.PrintRune(' ')
+			}
 
 		}
 	}
+	z01.PrintRune('\n')
 }
 
 func main() {
