@@ -13,3 +13,34 @@
 // z
 // $
 // ```
+
+package main
+
+import (
+	"os"
+
+	"github.com/01-edu/z01"
+)
+
+func main() {
+	if len(os.Args) != 2 {
+		z01.PrintRune('z')
+		z01.PrintRune(10)
+	}
+
+	input := os.Args[1]
+	found := false
+
+	for _, char := range input {
+		if char == 'z' {
+			z01.PrintRune('z')
+			z01.PrintRune(10)
+			found = true
+		}
+	}
+
+	if !found {
+		z01.PrintRune('z')
+		z01.PrintRune(10)
+	}
+}
