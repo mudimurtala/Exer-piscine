@@ -2,6 +2,17 @@ package main
 
 import "os"
 
+// ## displayfirstparam
+// ### Instructions
+// Write a program that displays its first argument, if there is one.
+// ### Usage
+// $ go run . hello there
+// hello
+// $ go run . "hello there" how are you
+// hello there
+// $ go run .
+// $
+
 // ✅ What does the program do overall?
 // This program:
 // Checks if the user typed something after the program name

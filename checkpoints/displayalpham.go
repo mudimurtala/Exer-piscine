@@ -2,6 +2,15 @@ package main
 
 import "github.com/01-edu/z01"
 
+// ## displayalpham
+// ### Instructions
+// Write a program that displays the alphabet, with even letters in uppercase, and odd letters in lowercase, followed by a newline (`'\n'`).
+//### Usage
+// ```console
+// $ go run . | cat -e
+// aBcDeFgHiJkLmNoPqRsTuVwXyZ$
+// $
+
 // ✅ What does the program do as a whole?
 // It loops from a to z
 // And prints letters like:
