@@ -16,16 +16,12 @@
 
 package main
 
-import (
-	"os"
-
-	"github.com/01-edu/z01"
-)
+import "os"
 
 func main() {
 	if len(os.Args) != 2 {
-		z01.PrintRune('z')
-		z01.PrintRune(10)
+		os.Stdout.WriteString("z" + "\n")
+		return
 	}
 
 	input := os.Args[1]
@@ -33,14 +29,12 @@ func main() {
 
 	for _, char := range input {
 		if char == 'z' {
-			z01.PrintRune('z')
-			z01.PrintRune(10)
+			os.Stdout.WriteString("z" + "\n")
 			found = true
 		}
 	}
 
 	if !found {
-		z01.PrintRune('z')
-		z01.PrintRune(10)
+		os.Stdout.WriteString("z" + "\n")
 	}
 }
