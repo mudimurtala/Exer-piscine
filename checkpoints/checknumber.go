@@ -35,7 +35,8 @@ import (
 )
 
 func CheckNumber(arg string) bool {
-	for _, num := range arg {
+	for i := 0; i < len(arg); i++ {
+		num := arg[i]
 		if num >= '0' && num <= '9' {
 			return true
 		}
