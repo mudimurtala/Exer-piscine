@@ -59,4 +59,5 @@ func main() {
 	fmt.Println(RetainFirstHalf("A"))
 	fmt.Println(RetainFirstHalf(""))
 	fmt.Println(RetainFirstHalf("Hello World"))
+	fmt.Println(RetainFirstHalf("Murtala"))
 }
