@@ -56,7 +56,40 @@ func CamelToSnakeCase(s string) string {
 		return s
 	}
 
-	
+	array := []rune(s)
+
+	for i := 0; i < len(array); i++ {
+		r := array[i]
+		if !((r >= 'A' && r <= 'Z') || (r >= 'a' && r <= 'z')) {
+			return s
+		}
+	}
+
+	last := array[len(array) - 1]
+	if last >= 'A' && last <= 'Z' {
+		return s
+	}
+
+	prevUpper := false
+	for i := 0; i < len(array); i++ {
+		r := array[i]
+		isUpper := (r >= 'A' && r <= 'Z')
+		if isUpper && prevUpper {
+			return s
+		}
+		prevUpper = isUpper
+	}
+
+	out := make([]rune, 0, len(array) * 2)
+	for i := 0; i < len(array); i++ {
+		r := array[i]
+		if r >= 'A' && r <= 'Z' && i != 0 {
+			out = append(out, '_')
+		}
+		out = append(out, r)
+	}
+
+	return string(out)
 }
 
 func main() {
