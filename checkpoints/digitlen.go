@@ -53,10 +53,12 @@ func DigitLen(n, base int) int {
 	}
 
 	for n > 0 {
-		n / base
+		n = n / base
+
 		count++
 	}
 
+	return count
 }
 
 func main() {
