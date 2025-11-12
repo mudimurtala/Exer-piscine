@@ -39,12 +39,10 @@ import (
 	"fmt"
 )
 
-// Write a function `DigitLen()` that takes two integers as arguments and returns the times
-//  the first `int` can be divided by the second until it reaches zero.
-
 func DigitLen(n, base int) int {
-	count := 0
-	if base < 2 || base > 32 {
+	counter := 0
+
+	if base < 2 || base > 36 {
 		return -1
 	}
 
@@ -54,11 +52,10 @@ func DigitLen(n, base int) int {
 
 	for n > 0 {
 		n = n / base
-
-		count++
+		counter++
 	}
 
-	return count
+	return counter
 }
 
 func main() {
