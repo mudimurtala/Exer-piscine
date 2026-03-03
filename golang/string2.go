@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	text := "Hello"
+	text := "café"
 	fmt.Println(text)
 	fmt.Println(len(text))
 	fmt.Println(text[0])
