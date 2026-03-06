@@ -5,56 +5,70 @@ import (
 	"strings"
 )
 
+func main() {
+	// 1. Create a test slice with various scenarios
+	testWords := []string{
+		"This", "is", "a", "apple",    // Case 1: Standard lowercase
+		"and", "A", "orange",          // Case 2: Standard uppercase
+		"it", "takes", "a", "hour",    // Case 3: The 'h' rule
+		"but", "a", "banana",          // Case 4: Consonant (should NOT change)
+		"is", "just", "a",             // Case 5: 'a' at the very end (boundary check)
+	}
+
+	fmt.Println("Before:", testWords)
+
+	// 2. Call your function
+	result := fixArticles(testWords)
+
+	// 3. Print the result
+	fmt.Println("After: ", result)
+}
+
+// fixArticles iterates through a slice and converts a/A to an/An 
+// if the next word starts with a vowel or 'h'.
 func fixArticles(words []string) []string {
-    for i := 0; i < len(words); i++ {
-		if i == 'a' || 'A' {
-			if (i + 1) < len(words) {
-				nextWord := words[i + 1]
-				if len(nextWord) != 0 {
-					if nextWord[0] == 'a' || == 'e' || == 'i' || 'o' || == 'u' || == 'h' {
-						if i == 'a' {
-							i = 'an'
-						} else if i == 'an' {
-							i = 'An'
-						}
-					}
+	for i := 0; i < len(words); i++ {
+		// Guard Clause: Skip if it's not our target word
+		if words[i] != "a" && words[i] != "A" {
+			continue
+		}
+
+		// Check if there is a next word and it isn't empty
+		if i+1 < len(words) && len(words[i+1]) > 0 {
+			
+			// Get first character of next word as lowercase string
+			firstChar := strings.ToLower(string(words[i+1][0]))
+
+			// Check if it's a vowel or 'h'
+			if strings.ContainsAny(firstChar, "aeiouh") {
+				if words[i] == "a" {
+					words[i] = "an"
+				} else {
+					words[i] = "An"
 				}
 			}
 		}
 	}
 	return words
 }
-
-
-// 4. Step-by-Step Pseudocode
-// Start a loop that goes through every word in the words slice using index i.
-
-// Check if the current word is exactly "a" or "A".
-
-// The "Safety Check": Make sure there is actually a "next word" to look at. (Check if i + 1 is less than the total length of the slice).
-
-// The "Vowel/H Check":
-
-// Get the next word: nextWord := words[i+1].
-
-// Check if nextWord is not empty.
-
-// Check the first character of nextWord.
-
-// Is it 'a', 'e', 'i', 'o', 'u' or 'h' (case-insensitive)?
-
-// The Modification:
-
-// If the check is true:
-
-// If the current word was "a", change it to "an".
-
-// If the current word was "A", change it to "An".
-
-// Return the modified words slice.
-
-// 5. Deep Dive: Modifying the Slice
-// In Go, when you pass a slice to a function, you are passing a "pointer" to the underlying data. This means if you do words[i] = "an", you are actually changing the original list! You don't need to build a "new bucket" like we did with the runes exercise, unless you want to be extra safe.
-
-// Wait, what about "h"?
-// The task says: "if the next word begins with a vowel... or a h". This is a common rule in some English dialects or specific words (like "an hour"). Your code should treat 'h' just like 'a, e, i, o, u'.
+// func fixArticles(words []string) []string {
+//     for i := 0; i < len(words); i++ {
+// 		if words[i] == "a" || words[i] == "A" {
+// 			if (i + 1) < len(words) {
+// 				if len(words[i + 1]) != 0 {
+// 					firstLetter := strings.ToLower(string(words[i+1][0]))
+// 							if strings.ContainsAny(firstLetter, "aeiouh") {
+// 								if words[i] == "a" {
+// 									words[i] = "an"
+// 								} else if words[i] == "A" {
+// 									words[i] = "An"
+// 								}
+// 							}
+// 						}
+// 				}
+				
+// 			}
+// 		}
+// 	}
+// 	return words
+// }
