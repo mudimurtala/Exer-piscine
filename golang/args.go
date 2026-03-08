@@ -24,7 +24,8 @@ func main() {
 
 	// 2. TRANSFORM
 	// We convert bytes to string -> Uppercase it -> Convert back to bytes
-	transformed := strings.ToUpper(string(content))
+	transformed := toTitleCase(string(content))
+
 	byteData := []byte(transformed)
 
 	// 3. WRITE
@@ -36,4 +37,17 @@ func main() {
 	}
 
 	fmt.Printf("Success! Content written to %s\n", outputFile)
+}
+
+func toTitleCase(s string) string {
+    words := strings.Fields(s)
+
+	for i := 0; i < len(words); i++ {
+		if len(words[i]) == 0 {
+		firstChar := strings.ToUpper(string(words[i][0]))
+		restCharacters := strings.ToLower(words[i][1:])
+		words[i] = firstChar + restCharacters
+		}
+	}
+	return strings.Join(words, " ")
 }
