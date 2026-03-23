@@ -138,3 +138,70 @@ func main() {
 // |  __  | | | 
 // | |  | | |_| 
 // |_|  |_|
+
+
+
+
+
+
+
+
+
+// package main
+
+// import (
+// 	"fmt"
+// 	"os"
+// 	"strings"
+// )
+
+// func main() {
+// 	if len(os.Args) < 2 {
+// 		fmt.Println("Error found")
+// 	}
+
+// 	data, err := os.ReadFile("standard.txt")
+// 	if err != nil {
+// 		fmt.Println("Error found:", err)
+// 		return
+// 	}
+
+// 	// fmt.Println(data)
+// 	// fmt.Printf("%q\n", data)
+// 	// fmt.Printf("%T\n", data)
+
+// 	content := strings.Split(string(data), "\n")
+
+// 	// fmt.Println(content)
+// 	// fmt.Printf("%T\n", content)
+// 	// fmt.Printf("%q\n", content)
+
+// 	input := strings.Join(os.Args[1:], " ")
+// 	// fmt.Printf("%T\n", input)
+
+// 	lines := strings.Split(input, "\\n")
+
+// 	for i, line := range lines {
+// 		if line == "" {
+//             fmt.Println()
+//             continue
+//         }
+
+// 		for row := 0; row < 8; row++ {
+// 			for _, char := range input {
+// 				charLine := getChar(char, content)
+// 				fmt.Print(charLine[row])
+// 			}
+// 			fmt.Println()
+// 		}
+
+// 		if i < len(lines)-1 {
+//             fmt.Println()
+//         }
+// 	}	
+// }
+
+// func getChar(c rune, line []string) []string {
+// 	startline := (int(c) - 32) * 9
+// 	return line[startline : startline+8]
+// }
