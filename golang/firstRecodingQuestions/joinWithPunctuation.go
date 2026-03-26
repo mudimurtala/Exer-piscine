@@ -7,22 +7,24 @@ import (
 // Example - Input: ["hello", ",", "world", "!"] -> Expected Output: "hello, world!"
 func joinWithPunctuation(tokens []string) string {
 	result := ""
-	for i := 0; i < len(tokens); i++ {
-		if isPunctuation(tokens[i]) {
-			result += tokens[i]
+	for _, token := range tokens {
+		if isPunctuation(token) {
+			result += token
 		} else {
 			if result != "" {
 				result += " "
 			}
-			result += tokens[i]
+			result += token
 		}
 	}
 	return result
 }
 
 func main() {
-  tokens := []string{"hello", ",", "world", "!"}
-  fmt.Printf("joinWithPunctuation(...) -> %q\n", joinWithPunctuation(tokens))
+  greetings := []string{"hello", ",", "world", "!"}
+  fmt.Printf("joinWithPunctuation(...) -> %q\n", joinWithPunctuation(greetings))
+  sentence := []string{"Mudi", "!", "How", "are", "you", "?"}
+  fmt.Printf("joinWithPunctuation(...) -> %q\n", joinWithPunctuation(sentence))
 }
 
 func isPunctuation(s string) bool {
