@@ -26,4 +26,6 @@ func uppercaseLastN(words []string, n int) []string {
 func main() {
 	words := []string{"this", "is", "so", "amazing"}
 	fmt.Printf("uppercaseLastN(..., 2) -> %q\n", uppercaseLastN(words, 2))
+	sentence := []string{"Mudi", "is", "an", "amazing", "ai", "native", "software", "developer!"}
+	fmt.Printf("uppercaseLastN(..., 2) -> %q\n", uppercaseLastN(sentence, 4))
 } 
