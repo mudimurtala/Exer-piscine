@@ -6,6 +6,28 @@
 // StartsWithCapital("123abc")  → false
 // ```
 
+
+
+/* Non Regex Solution*/
+// package main
+// import (
+// 	"fmt"
+// )
+// func StartsWithCapital(s string) bool {
+// 	if s[0] >= 'A' && s[0] <= 'Z' {
+// 		return true
+// 	}
+// 	return false
+// }
+// func main() {
+// 	fmt.Println(StartsWithCapital("Hello"))
+// 	fmt.Println(StartsWithCapital("hello"))
+// 	fmt.Println(StartsWithCapital("123abc"))
+// }
+
+
+
+/* Regex Solution*/
 package main
 
 import (
