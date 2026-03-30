@@ -6,6 +6,38 @@
 // ExtractNumbers("room 101 on floor 3")        → ["101", "3"]
 // ```
 
+
+
+/* Non Regex Solution*/
+// package main
+// import ("fmt")
+// func ExtractNumbers(s string) []string {
+// 	var result []string
+// 	var current string
+// 	for i := 0; i < len(s); i++ {
+// 		if s[i] >= '0' && s[i] <= '9' {
+// 			current += string(s[i])
+// 		} else {
+// 			if current != "" {
+// 				result = append(result, current)
+// 				current = ""
+// 			}
+// 		}
+// 	}
+// 	// catch any number at the end of the string
+// 	if current != "" {
+// 		result = append(result, current)
+// 	}
+// 	return result
+// }
+// func main() {
+// 	fmt.Printf("%q\n", ExtractNumbers("I have 3 cats and 12 dogs"))
+// 	fmt.Printf("%q\n", ExtractNumbers("no numbers here"))
+// 	fmt.Printf("%q\n", ExtractNumbers("room 101 on floor 3"))
+// }
+
+
+/* Regex Solution*/
 package main
 
 import (
