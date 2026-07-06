@@ -55,6 +55,25 @@ func FirstWord(s string) string {
 	return word + "\n"
 }
 
+
+// Another solution
+// func FirstWord(s string) string {
+// 	if len(s) == 0 {
+// 		return "\n"
+// 	}
+
+// 	var builder strings.Builder
+// 	for _, char := range s {
+// 		if char == ' ' {
+// 			break
+// 		}
+// 		builder.WriteRune(char)
+// 	}
+
+// 	builder.WriteByte('\n')
+// 	return builder.String()
+// }
+
 func main() {
     fmt.Print(FirstWord("hello there"))
     fmt.Print(FirstWord(""))
