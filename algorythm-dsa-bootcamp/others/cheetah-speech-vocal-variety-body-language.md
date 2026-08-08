@@ -118,3 +118,21 @@ Now imagine that you are watching all of this happen. You see the cheetah begin 
 Just imagine your ordinary cat or dog. You give it food. It comes closer to you. You play with it. You throw something, and it runs after it. Now imagine doing something similar... with a cheetah. A cheetah. That same animal that can run at incredible speed. That same animal that we just watched bring down an antelope. Imagine having one sitting calmly beside you. I don't know about you... but even if the cheetah was completely tame... That's not Mudi, I can't do that. Because, after all... **a cheetah is a cheetah.**
 
 And maybe that is the lesson hiding inside this story. Speed does not come from size. It comes from design, from every part of a creature working together toward one purpose. The cheetah does not out muscle its prey. It out engineers it, spine, tail, focus, all moving as one. Perhaps that is true for us too. Our greatest strength rarely comes from being the biggest or the loudest in the room. It comes from how well every part of us, our mind, our voice, our body, works together toward one goal.
+
+---
+
+## SHOPPILOT — 2 MINUTE PITCH SCRIPT
+
+Hi, my name is Mudi Muritala, and I'm the founder of ShopPilot.
+
+Across Nigeria, millions of small business owners still track their sales with pen and paper. It's slow, it's easy to make mistakes, and if that notebook is lost, years of business history disappear with it. When these owners try to access funding or support, they often have no clean record to show for their hard work.
+
+ShopPilot solves this through WhatsApp, a platform they already use every day. A shop owner can type or send a voice note the same way they'd message a friend, "I sold five bags of rice for fifteen thousand naira," and ShopPilot logs it instantly and confirms it back to them. Over time, they get real insight into what's selling and where to focus.
+
+This matters because most digital tools ask people to learn something new. ShopPilot meets business owners exactly where they already are.
+
+Over the next 12 weeks, my expectation is to move ShopPilot from an idea to a tested concept. Success for me looks like speaking with real business owners, sharpening the product based on what they need, building a working MVP, and leaving this program with something I can confidently take to my first users and future investors.
+
+I'm ready to put in the work, and I'd love to do it with the Founders Lab.
+
+Thank you.
